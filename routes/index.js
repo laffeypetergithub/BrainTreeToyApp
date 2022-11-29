@@ -3,9 +3,9 @@ const braintree = require("braintree");
 
 const gateway = new braintree.BraintreeGateway({
   environment:  braintree.Environment.Sandbox,
-  merchantId:   '3zr8b6y8rj748xdh',
-  publicKey:    'd5nyvwgtcrnhvyr7',
-  privateKey:   'efdb303e84aad1cd61af69cb37b069e0'
+  merchantId:   process.env.MF_MERCHANT_ID,
+  publicKey:    process.env.MF_PUBLIC_KEY,
+  privateKey:   process.env.MF_PRIVATE_KEY,
 });
 
 module.exports.routes = (app) => {
